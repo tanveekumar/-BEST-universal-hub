@@ -39,7 +39,7 @@ btn.TextColor3 = Color3.fromRGB(255, 255, 255)
 btn.Position = UDim2.new(-0.01, 0, 0.5, 0)
 
 Fm.Parent = sg
-Fm.Size = UDim2.new(0.35, 0, 0.6, 0)
+Fm.Size = UDim2.new(0.39, 0, 0.6, 0)
 Fm.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 Fm.Position = UDim2.new(0.5, 0, 0.5, 0)
 Fm.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -57,7 +57,7 @@ Fm2.Size = UDim2.new(0.001, 0, 1, 0)
 Fm2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 
 btn1.Parent = Fm
-btn1.TextSize = 20
+btn1.TextSize = 10
 btn1.TextColor3 = Color3.fromRGB(255, 255, 255)
 btn1.Position = UDim2.new(0.02, 0, 0.06, 0)
 btn1.Size = UDim2.new(0.15, 0, 0.1, 0)
@@ -72,7 +72,7 @@ UiS1.ApplyStrokeMode = "Border"
 UiS1.Color = Color3.fromRGB(64, 64, 64)
 
 btn2.Parent = Fm
-btn2.TextSize = 11
+btn2.TextSize = 10
 btn2.TextColor3 = Color3.fromRGB(255, 255, 255)
 btn2.Position = UDim2.new(0.02, 0, 0.19, 0)
 btn2.Size = UDim2.new(0.15, 0, 0.1, 0)
