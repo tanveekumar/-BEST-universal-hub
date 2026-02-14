@@ -132,7 +132,7 @@ btn3.Parent = sf
 btn3.Position = UDim2.new(0.01, 0, 0.02, 0)
 btn3.Size = UDim2.new(0.95, 0, 0.027, 0)
 btn3.BackgroundColor3 = Color3.fromRGB(32, 32, 32)
-btn3.Text = "99 nights in the forest (VoidWare)"
+btn3.Text = "Best 99n script (key is thisisthekey)"
 btn3.TextSize = 10
 btn3.TextColor3 = Color3.fromRGB(255, 255, 255)
 btn3.TextXAlignment = "Left"
@@ -203,4 +203,8 @@ end)
 
 btn4.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+btn3.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/99-Nights-in-the-Forest-Best-99N-Script-AUTO-BUILD-TREE-DUPE-GODMODE-AND-REPOST-67207"))()
 end)
