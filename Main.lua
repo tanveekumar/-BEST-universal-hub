@@ -1,6 +1,9 @@
 --[[ Variables ]]--
 local Player = game.Players.LocalPlayer.PlayerGui
 
+--[[ Services ]]--
+local Tween = game:GetService("TweenService")
+
 --[[ Instances ]]--
 local sg = Instance.new("ScreenGui")
 local btn = Instance.new("TextButton")
@@ -28,6 +31,39 @@ local UiS4 = Instance.new("UIStroke")
 local UiS5 = Instance.new("UIStroke")
 local UiC5 = Instance.new("UICorner")
 
+--[[ Tweening ]]--
+local function TweeningMain()
+    local Info = TweenInfo.new(
+        0.2,
+        Enum.EasingStyle.Sine,
+        Enum.EasingDirection.InOut
+    )
+
+    local goal = {
+        Position = UDim2.new(0.5, 0, 0.5, 0),
+        BackgroundTransparency = 0
+    }
+
+    local tween = Tween:Create(Fm, Info, goal)
+    tween:Play()
+end
+
+local function TweeningMainBack()
+    local Info = TweenInfo.new(
+        0.2,
+        Enum.EasingStyle.Sine,
+        Enum.EasingDirection.InOut
+    )
+
+    local goal = {
+        Position = UDim2.new(0.5, 0, 0.6, 0),
+        BackgroundTransparency = 1
+    }
+
+    local tween = Tween:Create(Fm, Info, goal)
+    tween:Play()
+end
+
 --[[ Properties ]]--
 sg.Parent = Player
 sg.Name = "HubMainInstance"
@@ -52,9 +88,10 @@ btn.Position = UDim2.new(-0.01, 0, 0.5, 0)
 Fm.Parent = sg
 Fm.Size = UDim2.new(0.39, 0, 0.6, 0)
 Fm.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-Fm.Position = UDim2.new(0.5, 0, 0.5, 0)
+Fm.Position = UDim2.new(0.5, 0, 0.6, 0)
 Fm.AnchorPoint = Vector2.new(0.5, 0.5)
 Fm.Visible = false
+Fm.BackgroundTransparency = 1
 
 UiC1.Parent = Fm
 
@@ -163,7 +200,10 @@ btn.MouseButton1Click:Connect(function()
     if Fm.Visible == false then
         Fm.Visible = true
         btn.Text = "Close"
+        TweeningMain()
     else
+        TweeningMainBack()
+        task.wait(0.2)
         Fm.Visible = false
         btn.Text = "Open"
     end
@@ -208,3 +248,19 @@ end)
 btn3.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/99-Nights-in-the-Forest-Best-99N-Script-AUTO-BUILD-TREE-DUPE-GODMODE-AND-REPOST-67207"))()
 end)
+
+--[[ Tweening ]]--
+local function TweeningMain()
+    local Info = TweenInfo.new(
+        1,
+        Enum.EasingStyle.Linear,
+        Enum.EasingDirection.In
+    )
+
+    local goal = {
+        Position = UDim2.new(0.5, 0, 0.5, 0)
+    }
+
+    local tween = Tween:Create(Fm, Info, goal)
+    tween:Play()
+end
